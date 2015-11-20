@@ -18,7 +18,7 @@ set :use_sudo, true
 
 
 
-set :deploy_to,  "/home/akhil/work"
+set :deploy_to,  "/home/akhil/work/suresh"
 #set :ssh_options, { :forward_agent => true }
 # set :keep_releases, 5
 #default_run_options[:pty] = true
