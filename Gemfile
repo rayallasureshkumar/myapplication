@@ -21,13 +21,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'net-ssh', '~> 3.0.1', :git => "https://github.com/net-ssh/net-ssh"
 gem 'capistrano-bundler'
+gem 'sshkit', '~> 1.4.0'
 
   gem "capistrano-rails"
-   gem "capistrano"
+  gem "capistrano"
   gem "capistrano-ext"
-
+  gem 'capistrano-rvm'
+  gem 'rvm1-capistrano3', require: false
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

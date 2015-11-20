@@ -1,11 +1,12 @@
 # require 'capistrano/ext/multistage'
 # config valid only for current version of Capistrano
-lock '3.4.0'
-require 'bundler/capistrano'
+#lock '3.4.0'
+#require 'bundler/capistrano'
 set :application, 'myapplication'
 
 set :scm, :git
 set :repository, "git@github.com:rayallasureshkumar/myapplication.git"
+set :repo_url, "git@github.com:rayallasureshkumar/myapplication.git"
 set :branch, 'master' # remote branch
 set :deploy_via, :remote_cache # If you have public like github.com then use :remote_cache
 
@@ -14,7 +15,7 @@ set :deploy_via, :remote_cache # If you have public like github.com then use :re
 
 set :user, "akhil"
 set :use_sudo, false
-default_run_options[:pty] = true
+
 
 
 set :deploy_to,  "/home/akhil/work/suresh"
@@ -28,9 +29,9 @@ set :deploy_to,  "/home/akhil/work/suresh"
 
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 # server "192.168.0.65", :app, :web, :db, :primary => true
-role :web, "192.168.0.65"                          # Your HTTP server, Apache/etc
-role :app, "192.168.0.65"                          # This may be the same as your `Web` server
-role :db,  "192.168.0.65", :primary => true 				# This is where Rails migrations will run
+role :web, "akhil@192.168.0.65"                          # Your HTTP server, Apache/etc
+role :app, "akhil@192.168.0.65"                          # This may be the same as your `Web` server
+role :db,  "akhil@192.168.0.65", :primary => true 				# This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
 # if you're still using the script/reaper helper you will need

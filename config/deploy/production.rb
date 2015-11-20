@@ -1,7 +1,7 @@
 
 
-# server "myapplication_server.com", :app, :web, :db, :primary => true
-# set :deploy_to, "/home/akhil/myapplication_production"
+# server "192.168.0.65", :app, :web, :db, :primary => true
+# set :deploy_to, "/home/akhil/work/suresh"
 
 
 # server-based syntax
