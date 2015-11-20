@@ -14,11 +14,11 @@ set :deploy_via, :remote_cache # If you have public like github.com then use :re
 
 
 set :user, "akhil"
-set :use_sudo, false
+set :use_sudo, true
 
 
 
-set :deploy_to,  "/home/akhil/work/suresh"
+set :deploy_to,  "/home/akhil/work"
 #set :ssh_options, { :forward_agent => true }
 # set :keep_releases, 5
 #default_run_options[:pty] = true
