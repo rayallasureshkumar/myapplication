@@ -25,7 +25,7 @@ set :deploy_to,  "/home/akhil/work/suresh"
 #set :ssh_options, { :forward_agent => true }
 #set :default_run_options, {:pty => true}
  set :keep_releases, 2
-
+#set :tmp_dir, 'tem'
 
 #set :ssh_options, {:forward_agent => true}
 
@@ -50,14 +50,10 @@ role :db,  "akhil@192.168.0.65", :primary => true 				# This is where Rails migr
    # task :bundle_gems do 
    # 	run "cd #{deploy_to}/current && bundle install vendor/gems"
    # end
-   task :releases do 
-   	run "mkdir #{ suresh }/new"
-    run "mv current releases/old && mv releases/new current"
-    run "rm -rf releases/old"
-   end
+   
  end
 
-after "deploy", "deploy:releases"
+#after "deploy", "deploy:restart_daemons"
 #after "deploy:bundle_gems",    "deploy:restart"
 
 
