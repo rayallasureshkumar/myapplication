@@ -1,5 +1,5 @@
 class CollegesController < ApplicationController
 	def index
-		colleges = Collage.all
+		colleges = College.all
 	end
 end
