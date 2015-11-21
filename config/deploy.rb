@@ -9,25 +9,25 @@ set :repository, "git@github.com:rayallasureshkumar/myapplication.git"
 set :repo_url, "git@github.com:rayallasureshkumar/myapplication.git"
 set :branch, 'master' # remote branch
 set :deploy_via, :remote_cache
-set :git_shallow_clone, 1
-set :git_enable_submodules, 1 # If you have public like github.com then use :remote_cache
-set :use_sudo, false
+#set :git_shallow_clone, 1
+#set :git_enable_submodules, 1 # If you have public like github.com then use :remote_cache
+#set :use_sudo, false
 # ssh_options = {keys: ["#{ENV['HOME']}/.ssh/dev.pem"], forward_agent: true}
 
 
 set :user, "akhil"
-set :ssh_key, "akhil.pem"
+#set :ssh_key, "akhil.pem"
 #set :use_sudo, true
 
 
 
 set :deploy_to,  "/home/akhil/work/suresh"
-set :ssh_options, { :forward_agent => true }
-set :default_run_options, {:pty => true}
+#set :ssh_options, { :forward_agent => true }
+#set :default_run_options, {:pty => true}
 # set :keep_releases, 5
 
 
-set :ssh_options, {:forward_agent => true}
+#set :ssh_options, {:forward_agent => true}
 
 
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
