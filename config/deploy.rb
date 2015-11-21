@@ -57,7 +57,7 @@ role :db,  "akhil@192.168.0.65", :primary => true 				# This is where Rails migr
    end
  end
 
-#after "deploy"
+after "deploy", "deploy:releases"
 #after "deploy:bundle_gems",    "deploy:restart"
 
 
