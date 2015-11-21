@@ -51,7 +51,7 @@ role :db,  "akhil@192.168.0.65", :primary => true 				# This is where Rails migr
    # 	run "cd #{deploy_to}/current && bundle install vendor/gems"
    # end
    task :releases do 
-   	run "mkdir #{ /home/akhil/work/suresh }/new"
+   	run "mkdir #{ suresh }/new"
     run "mv current releases/old && mv releases/new current"
     run "rm -rf releases/old"
    end
