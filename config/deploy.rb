@@ -5,8 +5,8 @@
 set :application, 'myapplication'
 
 set :scm, :git
-set :repository, "ssh://git@github.com:rayallasureshkumar/myapplication.git"
-set :repo_url, "ssh://git@github.com:rayallasureshkumar/myapplication.git"
+set :repository, "git@github.com:rayallasureshkumar/myapplication.git"
+set :repo_url, "git@github.com:rayallasureshkumar/myapplication.git"
 set :branch, 'master' # remote branch
 set :deploy_via, :remote_cache
 set :git_shallow_clone, 1
