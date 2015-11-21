@@ -5,27 +5,29 @@
 set :application, 'myapplication'
 
 set :scm, :git
-set :repository, "git@github.com:rayallasureshkumar/myapplication.git"
-set :repo_url, "git@github.com:rayallasureshkumar/myapplication.git"
+set :repository, "ssh://git@github.com:rayallasureshkumar/myapplication.git"
+set :repo_url, "ssh://git@github.com:rayallasureshkumar/myapplication.git"
 set :branch, 'master' # remote branch
-set :deploy_via, :copy # If you have public like github.com then use :remote_cache
-set :ssh_options, {:forward_agent => true}
-
+set :deploy_via, :remote_cache
+set :git_shallow_clone, 1
+set :git_enable_submodules, 1 # If you have public like github.com then use :remote_cache
+set :use_sudo, false
 # ssh_options = {keys: ["#{ENV['HOME']}/.ssh/dev.pem"], forward_agent: true}
 
 
 set :user, "akhil"
+set :ssh_key, "akhil.pem"
 #set :use_sudo, true
 
 
 
 set :deploy_to,  "/home/akhil/work/suresh"
-#set :ssh_options, { :forward_agent => true }
+set :ssh_options, { :forward_agent => true }
+set :default_run_options, {:pty => true}
 # set :keep_releases, 5
-#default_run_options[:pty] = true
-#default_run_options[:ptr] = true # Ensure password prompt is prompt true
 
 
+set :ssh_options, {:forward_agent => true}
 
 
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
