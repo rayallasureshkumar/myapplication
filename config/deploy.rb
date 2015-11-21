@@ -24,7 +24,7 @@ set :user, "akhil"
 set :deploy_to,  "/home/akhil/work/suresh"
 #set :ssh_options, { :forward_agent => true }
 #set :default_run_options, {:pty => true}
-# set :keep_releases, 5
+ set :keep_releases, 2
 
 
 #set :ssh_options, {:forward_agent => true}
