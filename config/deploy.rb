@@ -42,11 +42,7 @@ role :db,  "akhil@192.168.0.65", :primary => true 				# This is where Rails migr
 
 # If you are using Passenger mod_rails uncomment this:
  namespace :deploy do
-  task :start do 
-    run "mkdir #{ /home/akhil/work/suresh }/new"
-    run "mv current releases/old && mv releases/new current"
-    run "rm -rf releases/old"
-  end
+  task :start do : end
    task :stop do ; end
    # task :restart, :roles => :app, :except => { :no_release => true } do
    #   run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
@@ -54,6 +50,11 @@ role :db,  "akhil@192.168.0.65", :primary => true 				# This is where Rails migr
    # task :bundle_gems do 
    # 	run "cd #{deploy_to}/current && bundle install vendor/gems"
    # end
+   task :releases do 
+   	run "mkdir #{ /home/akhil/work/suresh }/new"
+    run "mv current releases/old && mv releases/new current"
+    run "rm -rf releases/old"
+   end
  end
 
 #after "deploy"
