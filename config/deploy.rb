@@ -8,13 +8,14 @@ set :scm, :git
 set :repository, "git@github.com:rayallasureshkumar/myapplication.git"
 set :repo_url, "git@github.com:rayallasureshkumar/myapplication.git"
 set :branch, 'master' # remote branch
-set :deploy_via, :remote_cache # If you have public like github.com then use :remote_cache
+set :deploy_via, :copy # If you have public like github.com then use :remote_cache
+set :ssh_options, {:forward_agent => true}
 
 # ssh_options = {keys: ["#{ENV['HOME']}/.ssh/dev.pem"], forward_agent: true}
 
 
 set :user, "akhil"
-set :use_sudo, true
+#set :use_sudo, true
 
 
 
