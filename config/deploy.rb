@@ -7,7 +7,7 @@ set :application, 'myapplication'
 set :scm, :git
 set :repository, "git@github.com:rayallasureshkumar/myapplication.git"
 set :repo_url, "git@github.com:rayallasureshkumar/myapplication.git"
-set :branch, 'master' # remote branch
+set :branch, 'suresh' # remote branch
 set :deploy_via, :remote_cache
 #set :git_shallow_clone, 1
 #set :git_enable_submodules, 1 # If you have public like github.com then use :remote_cache
