@@ -16,8 +16,8 @@ set :deploy_via, :remote_cache
 
 
 set :user, "akhil"
-#set :ssh_key, "akhil.pem"
-#set :use_sudo, true
+# set :password, " "
+set :use_sudo, false
 
 
 
